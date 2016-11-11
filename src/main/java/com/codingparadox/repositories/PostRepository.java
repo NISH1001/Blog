@@ -13,4 +13,7 @@ import java.util.List;
 public interface PostRepository extends MongoRepository<Post, String>{
 
 	//List<Post> findByLastName(@Param("author") String author);
+	List<Post> findByAuthorAndContentRegex(String author, String content);
+	List<Post> findByAuthor(String author);
+	List<Post> findByContentRegex(String content);
 }
