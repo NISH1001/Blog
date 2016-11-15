@@ -13,8 +13,7 @@ public class Post {
 	
 	public Post(){}
 	
-	public Post(String id, String author, String content){
-		this.id = id;
+	public Post(String author, String content){
 		this.author = author;
 		this.content = content;
 	}

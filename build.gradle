@@ -23,6 +23,19 @@ targetCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+	jcenter()
+}
+
+test {
+
+    testLogging {
+
+        // Show that tests are run in the command-line output
+
+        events 'started', 'passed'
+
+    }
+
 }
 
 
@@ -30,5 +43,9 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
 	compile('org.springframework.boot:spring-boot-starter-data-rest')
 	compile('org.springframework.boot:spring-boot-starter-web')
+
+	// https://mvnrepository.com/artifact/io.rest-assured/rest-assured
+	testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.0.1'
+	testCompile group: 'org.testng', name: 'testng', version: '6.9.10'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
